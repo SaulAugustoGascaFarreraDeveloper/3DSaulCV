@@ -3,7 +3,6 @@ import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { Test } from "./test";
 export const Background = () => {
   const material = useRef();
   const color = useRef({
@@ -21,7 +20,7 @@ export const Background = () => {
   useEffect(() => {
     tl.current = gsap.timeline();
     tl.current.to(color.current, {
-      color: '#373636',
+      color: "#212121",
     });
     tl.current.to(color.current, {
       color: "#7a7ca5",
@@ -29,8 +28,6 @@ export const Background = () => {
     tl.current.to(color.current, {
       color: "#9b96dd",
     });
-
-    
   }, []);
 
   return (
@@ -42,11 +39,6 @@ export const Background = () => {
           toneMapped={false}
         />
       </Sphere>
-
-      
-     
     </group>
-
-    
   );
 };

@@ -1,19 +1,16 @@
+import { ValidationError, useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import { faWhatsapp,faInstagram, faGithub, faFacebook,faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
 
 const Section = (props) => {
-  const { children,mobileTop } = props;
+  const { children, mobileTop } = props;
 
   return (
     <motion.section
       className={`
   h-screen w-screen p-8 max-w-screen-2xl mx-auto
-  flex flex-col items-start 
+  flex flex-col items-start
   ${mobileTop ? "justify-start md:justify-center" : "justify-center"}
   `}
       initial={{
@@ -39,11 +36,9 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection} />
-      <EducationSection /> 
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
-      
     </div>
   );
 };
@@ -52,13 +47,13 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="text-3xl sm:text-20xl font-extrabold leading-snug mt-8 md:mt-0">
-        Hola, soy
+      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
+        Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Saul Augusto Gasca Farrera</span>
+        <span className="bg-white px-1 italic">Wawa Sensei</span>
       </h1>
       <motion.p
-        className="text-lg text-gray-800 mt-4"
+        className="text-lg text-gray-600 mt-4"
         initial={{
           opacity: 0,
           y: 25,
@@ -72,15 +67,14 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        Soy desarollador web y desarollador de apps interactivas
-        <br/><br/>
-        <strong>Repositorio de proyectos: </strong> <a href="https://github.com/SaulAugustoGascaFarreraDeveloper?tab=repositories">github.com/SaulAugustoGascaFarreraDeveloper</a>
-        
+        I make YouTube videos to help developers
+        <br />
+        learn how to build 3D apps
       </motion.p>
       <motion.button
-        onClick={() => setSection(4)}
+        onClick={() => setSection(3)}
         className={`bg-indigo-600 text-white py-4 px-8 
-      rounded-lg font-bold text-lg mt-4 md:mt-5`}
+      rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
           y: 25,
@@ -94,164 +88,55 @@ const AboutSection = (props) => {
           delay: 2,
         }}
       >
-        Contactame
+        Contact me
       </motion.button>
     </Section>
   );
 };
 
-
-const EducationSection = () => {
-
-
-
-
-  return(
-    <Section>
-
-
-        <h1 className='text-3xl md:text-4xl font-extrabold leading-snug text-white'>
-                    Educación
-                </h1>
-                <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
-                
-                    initial={{
-                        opacity: 0,
-                        y: 20
-                    }}
-
-                    whileInView={{
-                        opacity: 1,
-                        y: 0
-                    }}
-
-                    transition={{
-                        duration: 1,
-                        delay: 0.7
-                    }}
-                
-                >
-                    Licenciatura en Ingenieria en Software y Sistemas Computacionales 
-                   
-                </motion.p>
-                <motion.p className='text-xl  text-gray-100 mt-6'
-                
-                    initial={{
-                        opacity: 0,
-                        y: 20
-                    }}
-
-                    whileInView={{
-                        opacity: 1,
-                        y: 0
-                    }}
-
-                    transition={{
-                        duration: 1,
-                        delay: 0.9
-                    }}
-                
-                >
-                    Universidad De La Salle Bajio , 2016 - 2020
-                   
-                </motion.p>
-                <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
-                
-                    initial={{
-                        opacity: 0,
-                        y: 20
-                    }}
-
-                    whileInView={{
-                        opacity: 1,
-                        y: 0
-                    }}
-
-                    transition={{
-                        duration: 1,
-                        delay: 0.7
-                    }}
-                
-                >
-                    Maestria en Desarrollo y Programación de Videojuegos
-                   
-                </motion.p>
-                <motion.p className='text-xl  text-gray-100 mt-6'
-                
-                    initial={{
-                        opacity: 0,
-                        y: 20
-                    }}
-
-                    whileInView={{
-                        opacity: 1,
-                        y: 0
-                    }}
-
-                    transition={{
-                        duration: 1,
-                        delay: 0.9
-                    }}
-                
-                >
-                    Coco School , 2023 - 2025
-                   
-                </motion.p>
-
-
-    </Section>
-  )
-}
-
-
 const skills = [
   {
-    title: "Javascript / NodeJS",
-    level: 80
-},
-{
-    title: "React / NextJS",
-    level: 80
-},
-{
-    title: "HTML / CSS",
-    level: 80
-},
-{
-    title: "Unity / C#",
-    level: 50
-},
-{
-    title: "Unreal Engine / C++",
-    level: 50
-},
-{
-    title: "SQL",
-    level: 60
-},
-{
-  title: "Microsoft Office",
-  level: 75
-},
+    title: "Threejs / React Three Fiber",
+    level: 80,
+  },
+  {
+    title: "React / React Native",
+    level: 90,
+  },
+  {
+    title: "Nodejs",
+    level: 90,
+  },
+  {
+    title: "Typescript",
+    level: 60,
+  },
+  {
+    title: "3D Modeling",
+    level: 40,
+  },
 ];
 const languages = [
   {
-    title: "Español",
+    title: "🇫🇷 French",
     level: 100,
   },
   {
-    title: "Ingles",
-    level: 60,
+    title: "🇺🇸 English",
+    level: 80,
   },
-  
+  {
+    title: "🇯🇵 Japanese",
+    level: 20,
+  },
 ];
 
 const SkillsSection = () => {
   return (
     <Section>
       <motion.div className="w-full" whileInView={"visible"}>
-        <h2 className="text-3xl md:text-5xl font-bold text-white">Habilidades</h2>
-        <div className=" mt-8 space-y-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-white">Skills</h2>
+        <div className="mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-full md:w-64" key={index}>
               <motion.h3
@@ -294,7 +179,9 @@ const SkillsSection = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">Idiomas</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">
+            Languages
+          </h2>
           <div className="mt-8 space-y-4">
             {languages.map((lng, index) => (
               <div className="w-full md:w-64" key={index}>
@@ -361,14 +248,14 @@ const ProjectsSection = () => {
           className="hover:text-indigo-600 transition-colors"
           onClick={previousProject}
         >
-          ← Anterior
+          ← Previous
         </button>
-        <h2 className="text-3xl md:text-5xl font-bold">Proyectos Recientes</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">Projects</h2>
         <button
           className="hover:text-indigo-600 transition-colors"
           onClick={nextProject}
         >
-          Siguiente →
+          Next →
         </button>
       </div>
     </Section>
@@ -376,39 +263,66 @@ const ProjectsSection = () => {
 };
 
 const ContactSection = () => {
+  const [state, handleSubmit] = useForm("mayzgjbd");
   return (
     <Section>
-      <h2 className="text-3xl md:text-5xl font-bold">Contactame</h2>
+      <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
       <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
-        <form>
-        <div className="flex items-center">
-        <FontAwesomeIcon className="mr-2 text-green-600" icon={faWhatsapp} style={{ fontSize: '35px' }} />
-        <a href="https://api.whatsapp.com/send?phone=4425785179">
-          4425785179
-        </a>
+        {state.succeeded ? (
+          <p className="text-gray-900 text-center">Thanks for your message !</p>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <label for="name" className="font-medium text-gray-900 block mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            />
+            <label
+              for="email"
+              className="font-medium text-gray-900 block mb-1 mt-8"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            />
+            <ValidationError
+              className="mt-1 text-red-500"
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+            <label
+              for="email"
+              className="font-medium text-gray-900 block mb-1 mt-8"
+            >
+              Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            />
+            <ValidationError
+              className="mt-1 text-red-500"
+              errors={state.errors}
+            />
+            <button
+              disabled={state.submitting}
+              className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
+            >
+              Submit
+            </button>
+          </form>
+        )}
       </div>
-      <br/>
-      <div className="flex items-center">
-        
-        <FontAwesomeIcon className="mr-2" icon={faEnvelope} style={{ fontSize: '35px' }} />
-         sgfarreradev@gmail.com
-      </div>
-      <br/>
-      <div className="flex items-center">
-        
-        <a href="https://www.instagram.com/saulagf115/">
-        <FontAwesomeIcon className="mr-2 text-[#E1306C]" icon={faInstagram} style={{ fontSize: '35px' }} />
-        </a>
-        
-        <a href="https://www.youtube.com/channel/UC1d452U6DrPOeeMypXKNz3A">
-        <FontAwesomeIcon className="mr-2 text-[#ff4141]" icon={faYoutube} style={{ fontSize: '35px' }} />
-        </a>
-        
-      </div>
-        </form>
-      </div>
-      <br/>
-      
     </Section>
   );
 };

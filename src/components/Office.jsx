@@ -35,11 +35,11 @@ export function Office(props) {
   const glassTextureOpacity = useMotionValue(0);
 
   useEffect(() => {
-    animate(textureOpacity, section === 0 ? 1 : 0,{
-      duration: 0.8
+    animate(textureOpacity, section === 0 ? 1 : 0, {
+      duration: 0.8,
     });
-    animate(glassTextureOpacity, section === 0 ? 0.42 : 0,{
-      duration: 0.8
+    animate(glassTextureOpacity, section === 0 ? 0.42 : 0, {
+      duration: 0.8,
     });
   }, [section]);
 
@@ -347,4 +347,4 @@ export function Office(props) {
 }
 
 useGLTF.preload("models/scene.gltf");
-//useTexture.preload("textures/baked.jpg")
+useTexture.preload("textures/baked.jpg");

@@ -8,38 +8,28 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 export function Avatar(props) {
-  const { animation,wireframe } = props;
+  const { animation, wireframe } = props;
   const { headFollow, cursorFollow } = useControls({
     headFollow: false,
     cursorFollow: false,
-    
   });
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/64a309ad7aa10d9c80c34d96.glb");
+  const { nodes, materials } = useGLTF("models/646d9dcdc8a5f5bddbfac913.glb");
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
   const { animations: standingAnimation } = useFBX(
-    "animations/Breathing Idle.fbx"
+    "animations/Standing Idle.fbx"
   );
   const { animations: fallingAnimation } = useFBX(
     "animations/Falling Idle.fbx"
   );
-  const { animations: runningAnimation } = useFBX(
-    "animations/Running.fbx"
-  );
-
-  const { animations: phoneAnimation } = useFBX(
-    "animations/Phone.fbx"
-  );
 
   typingAnimation[0].name = "Typing";
-  standingAnimation[0].name = "Breathing";
+  standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
-  runningAnimation[0].name = "Running";
-  phoneAnimation[0].name = "Phone"
 
   const { actions } = useAnimations(
-    [typingAnimation[0], standingAnimation[0], fallingAnimation[0],runningAnimation[0],phoneAnimation[0]],
+    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
     group
   );
 
@@ -141,9 +131,7 @@ export function Avatar(props) {
   );
 }
 
-useGLTF.preload("models/64a309ad7aa10d9c80c34d96.glb");
-// useGLTF.preload("animations/Typing.fbx");
-// useGLTF.preload("animations/Breathing Idle.fbx");
-// useGLTF.preload("animations/Falling Idle.fbx");
-// useGLTF.preload("animations/Running.fbx");
-// useGLTF.preload("animations/Phone.fbx");
+useGLTF.preload("models/646d9dcdc8a5f5bddbfac913.glb");
+useFBX.preload("animations/Typing.fbx");
+useFBX.preload("animations/Standing Idle.fbx");
+useFBX.preload("animations/Falling Idle.fbx");

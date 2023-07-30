@@ -8,33 +8,33 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Generador Blogs",
-    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
-    image: "projects/blogs.jpg",
+    title: "Wawatmos",
+    url: "https://r3f-wawatmos-final.vercel.app/",
+    image: "projects/wawatmos.jpg",
     description: "Recreating the Atmos Awwwards website with React Three Fiber",
   },
   {
-    title: "Generador Dibujo",
-    url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
-    image: "projects/dibujo.jpg",
+    title: "Portfolio Baking",
+    url: "https://www.youtube.com/watch?v=YkHqpqJgLKw",
+    image: "projects/baking.jpg",
     description: "Learn how to bake a 3D model with Blender and use it in r3f",
   },
   {
-    title: "Pagina FESSJO",
-    url: "https://fessjo-git-main-saulaugustogascafarreradeveloper.vercel.app",
-    image: "projects/blogs.jpg",
-    description: "Pagina desarollada para empresa FESSJO",
+    title: "3D Avatar",
+    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
+    image: "projects/avatar.jpg",
+    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
   },
   {
     title: "Kanagame",
-    url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
-    image: "projects/dibujo.jpg",
+    url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
+    image: "projects/kanagame.jpg",
     description: "Use React Three Fiber to create a 3D game",
   },
   {
     title: "Loader",
-    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
-    image: "projects/blogs.jpg",
+    url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
+    image: "projects/loader.jpg",
     description: "Create a loading screen for your r3f projects",
   },
 ];
@@ -98,7 +98,7 @@ export const Projects = () => {
   const [currentProject] = useAtom(currentProjectAtom);
 
   return (
-    <group position-y={-viewport.height * 3 + 1}>
+    <group position-y={-viewport.height * 2 + 1}>
       {projects.map((project, index) => (
         <motion.group
           key={"project_" + index}
