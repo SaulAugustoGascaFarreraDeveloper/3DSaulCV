@@ -14,22 +14,30 @@ export function Avatar(props) {
     cursorFollow: false,
   });
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/646d9dcdc8a5f5bddbfac913.glb");
+  const { nodes, materials } = useGLTF("models/64a309ad7aa10d9c80c34d96.glb");
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
   const { animations: standingAnimation } = useFBX(
-    "animations/Standing Idle.fbx"
+    "animations/Breathing Idle.fbx"
   );
   const { animations: fallingAnimation } = useFBX(
     "animations/Falling Idle.fbx"
   );
+  const { animations: runningAnimation } = useFBX(
+    "animations/Running.fbx"
+  );
+  const { animations: phoneAnimation } = useFBX(
+    "animations/Phone.fbx"
+  );
 
   typingAnimation[0].name = "Typing";
-  standingAnimation[0].name = "Standing";
+  standingAnimation[0].name = "Breathing";
   fallingAnimation[0].name = "Falling";
+  runningAnimation[0].name = "Running";
+  phoneAnimation[0].name = "Phone";
 
   const { actions } = useAnimations(
-    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
+    [typingAnimation[0], standingAnimation[0], fallingAnimation[0],runningAnimation[0],phoneAnimation[0]],
     group
   );
 
@@ -131,7 +139,9 @@ export function Avatar(props) {
   );
 }
 
-useGLTF.preload("models/646d9dcdc8a5f5bddbfac913.glb");
+useGLTF.preload("models/64a309ad7aa10d9c80c34d96.glb");
 useFBX.preload("animations/Typing.fbx");
-useFBX.preload("animations/Standing Idle.fbx");
+useFBX.preload("animations/Breathing Idle.fbx");
 useFBX.preload("animations/Falling Idle.fbx");
+useFBX.preload("animations/Phone.fbx");
+useFBX.preload("animations/Running.fbx");

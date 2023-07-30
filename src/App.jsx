@@ -10,6 +10,7 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Menu } from "./components/Menu";
 import { ScrollManager } from "./components/ScrollManager";
 import { framerMotionConfig } from "./config";
+import { Matrix } from "./components/Matrix";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <>
-      <LoadingScreen started={started} setStarted={setStarted} />
+      {/* <LoadingScreen started={started} setStarted={setStarted} /> */}
+      <Matrix started={started} setStarted={setStarted} />
       <MotionConfig
         transition={{
           ...framerMotionConfig,

@@ -50,10 +50,10 @@ const AboutSection = (props) => {
       <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span className="bg-white px-1 italic">Saul Augusto Gasca Farrera</span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-lg text-gray-900 mt-4"
         initial={{
           opacity: 0,
           y: 25,
@@ -67,9 +67,8 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
-        <br />
-        learn how to build 3D apps
+        Soy desarollador web y desarollador de apps interactivas
+        
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
