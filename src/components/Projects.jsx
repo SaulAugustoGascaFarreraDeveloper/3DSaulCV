@@ -8,33 +8,33 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Wawatmos",
-    url: "https://r3f-wawatmos-final.vercel.app/",
-    image: "projects/wawatmos.jpg",
+    title: "Generador Blogs",
+    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
+    image: "projects/blogs.jpg",
     description: "Recreating the Atmos Awwwards website with React Three Fiber",
   },
   {
-    title: "Portfolio Baking",
-    url: "https://www.youtube.com/watch?v=YkHqpqJgLKw",
-    image: "projects/baking.jpg",
+    title: "Generador Dibujo",
+    url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
+    image: "projects/dibujo.jpg",
     description: "Learn how to bake a 3D model with Blender and use it in r3f",
   },
   {
-    title: "3D Avatar",
-    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
-    image: "projects/avatar.jpg",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
+    title: "Pagina FESSJO",
+    url: "https://fessjo-git-main-saulaugustogascafarreradeveloper.vercel.app",
+    image: "projects/blogs.jpg",
+    description: "Pagina desarollada para empresa FESSJO",
   },
   {
     title: "Kanagame",
-    url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
-    image: "projects/kanagame.jpg",
+    url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
+    image: "projects/dibujo.jpg",
     description: "Use React Three Fiber to create a 3D game",
   },
   {
     title: "Loader",
-    url: "https://www.youtube.com/watch?v=L12wIvuZTOY",
-    image: "projects/loader.jpg",
+    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
+    image: "projects/blogs.jpg",
     description: "Create a loading screen for your r3f projects",
   },
 ];
