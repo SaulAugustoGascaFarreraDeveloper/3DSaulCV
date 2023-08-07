@@ -2,9 +2,11 @@ import { ValidationError, useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import { faWhatsapp,faInstagram, faGithub, faFacebook,faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp,faInstagram, faGithub, faFacebook,faYoutube,faReact,faJs,faUnity,faHtml5,faMicrosoft} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase,faGamepad  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFlag,faFlagUsa } from "@fortawesome/free-solid-svg-icons";
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -40,9 +42,11 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection} />
-      <SkillsSection />
+      <EducationSection />
+      <SkillsSection />  
       <ProjectsSection />
       <ContactSection />
+      
     </div>
   );
 };
@@ -58,7 +62,7 @@ const AboutSection = (props) => {
         <span className="bg-white px-1 italic">Saul Augusto Gasca Farrera</span>
       </h1>
       <motion.p
-        className={` ${isMobile ? "text-2lg" : "text-2xl"  }  text-gray-900 mt-4`}
+        className={` ${isMobile ? "text-2lg" : "text-2xl"  } text-gray-900 mt-4`}
         initial={{
           opacity: 0,
           y: 25,
@@ -74,8 +78,15 @@ const AboutSection = (props) => {
       >
         Soy desarollador web y desarollador de apps interactivas
 
-        <br/>
-        <br/>
+        
+       
+        
+
+        <div className="flex items-center mb-5 mt-5">
+          <strong className="mr-2">Edad:</strong> 29 años
+        </div>
+
+        
 
         <div className="flex items-center">
           <FontAwesomeIcon className="mr-3 text-black" icon={faGithub} style={{ fontSize: '35px' }} /><a href="https://github.com/SaulAugustoGascaFarreraDeveloper?tab=repositories">github.com/SaulAugustoGascaFarreraDeveloper</a>
@@ -84,7 +95,7 @@ const AboutSection = (props) => {
         
       </motion.p>
       <motion.button
-        onClick={() => setSection(3)}
+        onClick={() => setSection(4)}
         className={`bg-indigo-600 text-white py-4 px-8 
       rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
@@ -106,45 +117,224 @@ const AboutSection = (props) => {
   );
 };
 
+
+const EducationSection = () => {
+
+
+  return(
+    <Section>
+
+
+        <h1 className='text-3xl md:text-4xl font-extrabold leading-snug text-white'>
+                    Educación
+                </h1>
+                <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
+                
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
+
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
+
+                    transition={{
+                        duration: 1,
+                        delay: 0.7
+                    }}
+                
+                >
+                    Licenciatura en Ingenieria en Software y Sistemas Computacionales 
+                   
+                </motion.p>
+                <motion.p className='text-xl  text-gray-100 mt-6'
+                
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
+
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
+
+                    transition={{
+                        duration: 1,
+                        delay: 0.9
+                    }}
+                
+                >
+                    Universidad De La Salle Bajio , 2016 - 2020
+                   
+                </motion.p>
+                <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
+                
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
+
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
+
+                    transition={{
+                        duration: 1,
+                        delay: 0.7
+                    }}
+                
+                >
+                    Maestria en Desarrollo y Programación de Videojuegos
+                   
+                </motion.p>
+                <motion.p className='text-xl  text-gray-100 mt-6'
+                
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
+
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
+
+                    transition={{
+                        duration: 1,
+                        delay: 0.9
+                    }}
+                
+                >
+                    Coco School , 2023 - 2025
+                   
+                </motion.p>
+
+
+    </Section>
+  )
+}
+
+
 const skills = [
   {
-    title: "Javascript / NodeJS",
-    level: 80
-},
-{
-    title: "React / NextJS",
-    level: 80
-},
-{
-    title: "HTML / CSS",
-    level: 80
-},
-{
-    title: "Unity / C#",
-    level: 50
-},
-{
-    title: "Unreal Engine / C++",
-    level: 50
-},
-{
-    title: "SQL",
-    level: 60
-},
-{
-  title: "Microsoft Office",
-  level: 75
-},
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-yellow-500 "
+          icon={faJs}
+          style={{ fontSize: "20px" }}
+        />
+        Javascript / NodeJS
+      </span>
+    ),
+    level: 80,
+  },
+  {
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-blue-700"
+          icon={faReact}
+          style={{ fontSize: "20px" }}
+        />
+        React / NextJS
+      </span>
+    ),
+    level: 80,
+  },
+  {
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-black"
+          icon={faUnity}
+          style={{ fontSize: "20px" }}
+        />
+        Unity / C#
+      </span>
+    ),
+    level: 50,
+  },
+  {
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-white "
+          icon={faGamepad}
+          style={{ fontSize: "20px" }}
+        />
+        Unreal Engine / C++
+      </span>
+    ),
+    level: 50,
+  },
+  {
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-orange-500 "
+          icon={faHtml5}
+          style={{ fontSize: "20px" }}
+        />
+        HTML / CSS
+      </span>
+    ),
+    level: 80,
+  },
+  {
+    title: (
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-blue-700 "
+          icon={faMicrosoft}
+          style={{ fontSize: "20px" }}
+        />
+        Microsoft Office
+      </span>
+    ),
+    level: 75,
+  },
+  {
+    title:(
+      <span>
+        <FontAwesomeIcon
+          className="mr-2 text-yellow-500"
+          icon={faDatabase}
+          style={{ fontSize: "20px" }}
+        />
+        SQL
+      </span>
+    ),
+    level: 60,
+  },
+  // Resto de las habilidades
 ];
+
+
 const languages = [
   {
-    title: "Español",
+    title: (
+      <span>
+       
+        Español
+      </span>
+    ),
     level: 100,
   },
   {
-    title: "Ingles",
+    title: (
+      <span>
+        
+        Ingles
+      </span>
+    ),
     level: 60,
   },
+  // Resto de los idiomas
 ];
 
 const SkillsSection = () => {
@@ -286,7 +476,7 @@ const ContactSection = () => {
       <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
         <form>
         <div className="flex items-center">
-        <FontAwesomeIcon className="mr-2 text-green-600" icon={faWhatsapp} style={{ fontSize: '35px' }} />
+        <FontAwesomeIcon className="mr-2 text-green-600 hover:-translate-y-[2px]" icon={faWhatsapp} style={{ fontSize: '35px' }} />
         <a href="https://api.whatsapp.com/send?phone=4425785179">
           4425785179
         </a>
@@ -294,19 +484,25 @@ const ContactSection = () => {
       <br/>
       <div className="flex items-center">
         
-        <FontAwesomeIcon className="mr-2" icon={faEnvelope} style={{ fontSize: '35px' }} />
+        <FontAwesomeIcon className="mr-2 hover:-translate-y-[2px]" icon={faEnvelope} style={{ fontSize: '35px' }} />
          sgfarreradev@gmail.com
       </div>
       <br/>
       <div className="flex items-center">
         
         <a href="https://www.instagram.com/saulagf115/">
-        <FontAwesomeIcon className="mr-2 text-[#E1306C]" icon={faInstagram} style={{ fontSize: '35px' }} />
+        <FontAwesomeIcon className="mr-2 text-[#E1306C] hover:-translate-y-[2px]" icon={faInstagram} style={{ fontSize: '35px' }} />
         </a>
         
         <a href="https://www.youtube.com/channel/UC1d452U6DrPOeeMypXKNz3A">
-        <FontAwesomeIcon className="mr-2 text-[#ff4141]" icon={faYoutube} style={{ fontSize: '35px' }} />
+        <FontAwesomeIcon className="mr-2 text-[#ff4141] hover:-translate-y-[2px]" icon={faYoutube} style={{ fontSize: '35px' }} />
         </a>
+
+          <div>
+          <a className="text-[#000000]" href="/file/SaulAugusto_GascaFarrera_CV_2023.pdf" download={true}>
+            <strong className="border-b-2 border-[#000000]">Descargar CV</strong>
+          </a>
+        </div>
         
       </div>
         </form>

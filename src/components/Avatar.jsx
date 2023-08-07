@@ -8,7 +8,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 export function Avatar(props) {
-  const { animation, wireframe } = props;
+  const { animation, wireframe,section } = props;
   const { headFollow, cursorFollow } = useControls({
     headFollow: false,
     cursorFollow: false,
@@ -58,9 +58,22 @@ export function Avatar(props) {
     };
   }, [animation]);
 
+
+  
+
   useEffect(() => {
     Object.values(materials).forEach((material) => {
-      material.wireframe = wireframe;
+
+      if(wireframe && section === 1)
+      {
+        material.wireframe = wireframe;
+        material.color = new THREE.Color("#94A38C");
+      }else {
+        material.wireframe = false; // Desactiva el modo de alambre
+        material.color = new THREE.Color("#FFFFFF");
+      }
+      
+      
     });
   }, [wireframe]);
 

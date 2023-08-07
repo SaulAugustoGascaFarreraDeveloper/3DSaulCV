@@ -7,35 +7,36 @@ import { atom, useAtom } from "jotai";
 import { useEffect, useRef } from "react";
 
 export const projects = [
-  {
-    title: "Generador Blogs",
-    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
-    image: "projects/blogs.jpg",
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
-  },
+  
   {
     title: "Generador Dibujo",
     url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
     image: "projects/dibujo.jpg",
-    description: "Learn how to bake a 3D model with Blender and use it in r3f",
+    description: "Dibuja y descarga las coordenadas en JSON",
   },
   {
     title: "Pagina FESSJO",
     url: "https://fessjo-git-main-saulaugustogascafarreradeveloper.vercel.app",
-    image: "projects/blogs.jpg",
+    image: "projects/FESSJOPAGINA.jpg",
     description: "Pagina desarollada para empresa FESSJO",
   },
   {
-    title: "Kanagame",
-    url: "https://saulaugustogascafarreradeveloper.github.io/DrawGenerator/",
-    image: "projects/dibujo.jpg",
-    description: "Use React Three Fiber to create a 3D game",
+    title: "Generador Blogs",
+    url: "https://youtu.be/ObdVu9IopEo",
+    image: "projects/blogs.jpg",
+    description: "Saas Generador de Blogs SEO con OpenAI",
   },
   {
-    title: "Loader",
-    url: "https://hammerhead-app-kykyv.ondigitalocean.app",
-    image: "projects/blogs.jpg",
-    description: "Create a loading screen for your r3f projects",
+    title: "Web Portafolio",
+    url: "https://3-d-saul-cv-v2.vercel.app",
+    image: "projects/portafolio.jpg",
+    description: "Sketch ThreeJS and NextJS portafolio with background music",
+  },
+  {
+    title: "VP Manager",
+    url: "https://res.cloudinary.com/saul115/video/upload/v1691446608/cigfdfogu8o3jr0qkj7x.mp4",
+    image: "projects/vpmanager.jpg",
+    description: "Software para Gestionar Videos en cloudinary",
   },
 ];
 
@@ -98,7 +99,7 @@ export const Projects = () => {
   const [currentProject] = useAtom(currentProjectAtom);
 
   return (
-    <group position-y={-viewport.height * 2 + 1}>
+    <group position-y={-viewport.height * 3.03 + 1}>
       {projects.map((project, index) => (
         <motion.group
           key={"project_" + index}
