@@ -30,13 +30,19 @@ export const projects = [
     title: "Web Portafolio",
     url: "https://3-d-saul-cv-v2.vercel.app",
     image: "projects/portafolio.jpg",
-    description: "Sketch ThreeJS and NextJS portafolio with background music",
+    description: "Sketch ThreeJS and NextJS portafolio sonido de fondo",
   },
   {
     title: "VP Manager",
     url: "https://res.cloudinary.com/saul115/video/upload/v1691446608/cigfdfogu8o3jr0qkj7x.mp4",
     image: "projects/vpmanager.jpg",
     description: "Software para Gestionar Videos en cloudinary",
+  },
+  {
+    title: "Quizmefy",
+    url: "https://res.cloudinary.com/saul115/video/upload/v1691446608/cigfdfogu8o3jr0qkj7x.mp4",
+    image: "projects/quizmefy.jpg",
+    description: "Software que usa OpenAI para simular una plataforma de cuestionarios - desarollo en progreso",
   },
 ];
 

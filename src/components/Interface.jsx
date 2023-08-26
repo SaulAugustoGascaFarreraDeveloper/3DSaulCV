@@ -89,7 +89,7 @@ const AboutSection = (props) => {
         
 
         <div className="flex items-center">
-          <FontAwesomeIcon className="mr-3 text-black" icon={faGithub} style={{ fontSize: '35px' }} /><a href="https://github.com/SaulAugustoGascaFarreraDeveloper?tab=repositories">github.com/SaulAugustoGascaFarreraDeveloper</a>
+          <FontAwesomeIcon className="mr-3 text-black" icon={faGithub} style={{ fontSize: '35px' }} /><a href="https://github.com/SaulAugustoGascaFarreraDeveloper?tab=repositories">SaulAugustoGascaFarreraDeveloper</a>
         </div>
         
         
@@ -498,13 +498,16 @@ const ContactSection = () => {
         <FontAwesomeIcon className="mr-2 text-[#ff4141] hover:-translate-y-[2px]" icon={faYoutube} style={{ fontSize: '35px' }} />
         </a>
 
-          <div>
+       
+
+        
+      </div>
+      
+      <div className="mt-2">
           <a className="text-[#000000]" href="/file/SaulAugusto_GascaFarrera_CV_2023.pdf" download={true}>
             <strong className="border-b-2 border-[#000000]">Descargar CV</strong>
           </a>
         </div>
-        
-      </div>
         </form>
       </div>
       <br/>
