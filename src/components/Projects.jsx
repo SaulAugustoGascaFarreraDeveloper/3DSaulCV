@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: "Quizmefy",
-    url: "https://quizmefy-project.vercel.app",
+    url: "https://quizmefy-pro.vercel.app",
     image: "projects/quizmefy.jpg",
     description: "Software que usa OpenAI para simular una plataforma de cuestionarios - desarollo en progreso",
   },
