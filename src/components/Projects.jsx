@@ -27,6 +27,12 @@ export const projects = [
     description: "Saas Generador de Blogs SEO con OpenAI",
   },
   {
+    title: "URAvatar",
+    url: "https://ur-avatar-ai-6ctp.vercel.app",
+    image: "projects/UrAvatar.png",
+    description: "Saas Generador de imagenes por medio de AI uando NextJS,ChakraUI y Prisma",
+  },
+  {
     title: "Web Portafolio",
     url: "https://3-d-saul-cv-v2.vercel.app",
     image: "projects/portafolio.jpg",
