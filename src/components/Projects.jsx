@@ -27,8 +27,8 @@ export const projects = [
     description: "Saas Generador de Blogs SEO con OpenAI",
   },
   {
-    title: "URAvatar",
-    url: "https://ur-avatar-ai-6ctp.vercel.app",
+    title: "FESSJO CORPORATION",
+    url: "https://fessjo-corporation.vercel.app",
     image: "projects/UrAvatar.png",
     description: "Saas Generador de imagenes por medio de AI uando NextJS,ChakraUI y Prisma",
   },
