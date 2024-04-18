@@ -170,7 +170,7 @@ const EducationSection = () => {
                     Universidad De La Salle Bajio , 2016 - 2020
                    
                 </motion.p>
-                <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
+                {/* <motion.p className='text-2xl font-extrabold text-gray-100 mt-6 border-b-2 border-white'
                 
                     initial={{
                         opacity: 0,
@@ -211,7 +211,7 @@ const EducationSection = () => {
                 >
                     Coco School , 2023 - 2025
                    
-                </motion.p>
+                </motion.p> */}
 
 
     </Section>
@@ -504,7 +504,7 @@ const ContactSection = () => {
       </div>
       
       <div className="mt-2">
-          <a className="text-[#000000]" href="/file/SaulAugusto_GascaFarrera_CV_2023.pdf" download={true}>
+          <a className="text-[#000000]" href="/file/SaulAugusto_GascaFarrera_CV_2024.pdf" download={true}>
             <strong className="border-b-2 border-[#000000]">Descargar CV</strong>
           </a>
         </div>

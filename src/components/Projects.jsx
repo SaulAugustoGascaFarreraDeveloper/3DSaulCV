@@ -27,10 +27,10 @@ export const projects = [
     description: "Saas Generador de Blogs SEO con OpenAI",
   },
   {
-    title: "FESSJO CORPORATION",
-    url: "https://fessjo-corporation.vercel.app",
-    image: "projects/UrAvatar.png",
-    description: "Saas Generador de imagenes por medio de AI uando NextJS,ChakraUI y Prisma",
+    title: "Credi Track",
+    url: "https://credi-track.vercel.app/",
+    image: "projects/credi.png",
+    description: "Proyecto en Progreso para administrar prestamos a clientes",
   },
   {
     title: "Web Portafolio",
@@ -39,16 +39,16 @@ export const projects = [
     description: "Sketch ThreeJS and NextJS portafolio sonido de fondo",
   },
   {
-    title: "VP Manager",
-    url: "https://res.cloudinary.com/saul115/video/upload/v1691446608/cigfdfogu8o3jr0qkj7x.mp4",
-    image: "projects/vpmanager.jpg",
-    description: "Software para Gestionar Videos en cloudinary",
+    title: "Danmaku Bullet Hell",
+    url: "https://www.youtube.com/watch?v=DiuINcMoiN8",
+    image: "projects/UE5.png",
+    description: "Videojuego desarollado en Unreal Engine 5",
   },
   {
-    title: "Quizmefy",
-    url: "https://quizmefy-pro.vercel.app",
-    image: "projects/quizmefy.jpg",
-    description: "Software que usa OpenAI para simular una plataforma de cuestionarios - desarollo en progreso",
+    title: "Chat with Website",
+    url: "https://smart-ai-video-generator.vercel.app",
+    image: "projects/chat.png",
+    description: "SaaS para chatear con un sitio web mediante web scraping",
   },
 ];
 
