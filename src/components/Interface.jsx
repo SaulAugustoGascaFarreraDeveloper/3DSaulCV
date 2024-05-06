@@ -83,7 +83,7 @@ const AboutSection = (props) => {
         
 
         <div className="flex items-center mb-5 mt-5">
-          <strong className="mr-2">Edad:</strong> 29 años
+          <strong className="mr-2">Edad:</strong> 30 años
         </div>
 
         
